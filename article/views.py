@@ -65,17 +65,6 @@ def article_detail(request, id):
         'toc': md.toc
     }
 
-    # article.body = markdown.markdown(
-    #     article.body,
-    #     extensions=[
-    #         'markdown.extensions.extra',
-    #         'markdown.extensions.codehilite',
-    #         'markdown.extensions.toc',
-    #     ]
-    # )
-    # context = {
-    #     'article': article
-    # }
     return render(request, 'article/detail.html', context)
 
 @login_required(login_url='/userprofile/login/')
