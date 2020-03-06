@@ -64,7 +64,6 @@ def article_detail(request, id):
         'article': article,
         'toc': md.toc
     }
-
     return render(request, 'article/detail.html', context)
 
 @login_required(login_url='/userprofile/login/')
